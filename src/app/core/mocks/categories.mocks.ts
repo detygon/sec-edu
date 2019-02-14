@@ -1,62 +1,68 @@
 export const categories = [
   {
     id: 1,
-    name: 'Permis de conduire',
-    label: 'Regroupe des cours sur le permis auto et sur le permis moto',
+    name: 'Panneaux',
+    label: '',
     image: ''
   },
   {
     id: 2,
-    name: 'La signalisation',
-    label: 'Regroupe les cours sur la signalisation et toutes les leçons relatives aux panneaux de signalisation',
+    name: 'Circulation',
+    label: '',
     image: ''
   },
   {
     id: 3,
-    name: 'Le conducteur',
-    label: 'Etat physique du conducteur, sanctions sur la consommation d\'alcool et de drogue',
+    name: 'Route',
+    label: '',
     image: ''
   },
   {
     id: 4,
-    name: 'Le véhicule',
-    label: ' Entretien, freinage éclairage et tous les autres équipements liés à l\'automobile',
+    name: 'Autres usagers',
+    label: '',
     image: ''
   },
   {
     id: 5,
-    name: 'Règles de circulation',
-    label: 'Pour tout connaitre sur les virage, la vitesse et les conditions de circulation',
+    name: 'Conducteur',
+    label: '',
     image: ''
   },
   {
     id: 6,
-    name: 'Intersection et priorité',
-    label: 'Signalisation et règles de circulation particulières aux intersections',
+    name: 'Sécurité',
+    label: '',
     image: ''
   },
   {
     id: 7,
-    name: 'Croisement et dépassement',
-    label: 'Reglementations liées à ces situations particulières',
+    name: 'Mécanique et équipements',
+    label: '',
     image: ''
   },
   {
     id: 8,
-    name: 'Arrêt et stationnement',
-    label: 'Deux notions différentes qu\'il faut distinguer à tout prix !',
+    name: 'Notion diverses',
+    label: '',
     image: ''
   },
   {
     id: 9,
-    name: 'Autoroute',
-    label: 'Insertion sur l\'autoroute, condition de circulation particulières',
+    name: 'Environnement',
+    label: '',
     image: ''
   },
   {
     id: 9,
-    name: 'Eclairage et visibilite',
-    label: 'Comment circuler lorsque les conditions météorologiques ne sont pas favorables',
+    name: 'Premiers secours',
+    label: '',
+    image: ''
+  },
+  {
+    id: 10,
+    name: 'Prendre et quitter son véhicule',
+    label: '',
     image: ''
   }
 ];
