@@ -31,16 +31,17 @@
       display: flex;
       justify-content: center;
       align-items: center;
+      flex-direction: column;
       position: relative;
-      margin-bottom: 40px;
+
 
       &:before {
         content: '';
         position: absolute;
-        bottom: -50%;
+        top: 0;
         left: 50%;
         width: 10px;
-        height: 120px;
+        height: 100%;
         transform: translateX(-50%);
         background-color: #f1f1f1;
       }
@@ -55,6 +56,11 @@
         position: relative;
         cursor: pointer;
         border-radius: 5px;
+        margin-bottom: 120px;
+
+        &:last-child {
+          margin-bottom: 0;
+        }
 
         .icon {
           position: absolute;
