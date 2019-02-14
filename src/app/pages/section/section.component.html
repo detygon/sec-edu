@@ -2,6 +2,9 @@
   <div class="sections__title">
     <h2>{{ topic?.name }}</h2>
     <p>{{ topic?.label }}</p>
+    <span class="back" [routerLink]="['/topics']">
+      <i class="material-icons">arrow_back</i> Retour
+    </span>
   </div>
   <div class="sections__content">
     <div class="first-issues">
@@ -34,6 +37,7 @@
     </div>
     <span class="close" [routerLink]="['/topics']">
       <i class="material-icons">close</i>
+      <span>ESC</span>
     </span>
   </div>
 </ng-template>
