@@ -1,6 +1,7 @@
 .topics {
   display: block;
-  padding-top: 60px;
+  height: calc(100vh - 65px);
+  margin-top: 65px;
 
   .topic {
     display: block;
