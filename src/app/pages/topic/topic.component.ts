@@ -24,6 +24,7 @@ export class TopicComponent implements OnInit {
    */
   private getTopics() {
     this.topicService.getAllTopics().subscribe((res) => {
+      console.log(res);
       this.topics = res;
     });
   }

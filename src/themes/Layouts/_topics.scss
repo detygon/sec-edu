@@ -1,3 +1,35 @@
 .topics {
   display: block;
+
+  .topic {
+    display: block;
+    background-color: #fff;
+    border-radius: 20px;
+    padding: 20px;
+    box-shadow: 0 2px 8px rgba(#000, .1);
+    margin-bottom: 20px;
+
+    &__picture {
+      display: block;
+      height: 210px;
+      line-height: 120px;
+      text-align: center;
+
+      img {
+        display: inline-block;
+        width: 80%;
+        height: auto;
+      }
+    }
+
+    &__body {
+      display: block;
+
+      h3 {
+        font-weight: 700;
+        font-size: .6rem;
+        text-align: center;
+      }
+    }
+  }
 }
