@@ -2,10 +2,67 @@ export const topics = [
   {
     id: 1,
     name: 'Panneaux',
-    label: '',
+    label: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum, accusamus?',
     image: '/assets/images/topics/002-traffic-sign.svg',
     section_number: 10,
-    slug: 'panneaux'
+    slug: 'panneaux',
+    is_completed: false,
+    sections: [
+      {
+        id: 1,
+        title: 'Observation',
+        content: 'Agglomération, intersection, descente de passagers',
+        icon: '/assets/images/sections/research.svg',
+        completed: true,
+        question: {
+          content: '',
+          entry_video: '',
+          success_video: '',
+          error_video: '',
+          answers: [
+            {
+              content: '',
+              is_correct: false
+            },
+            {
+              content: '',
+              is_correct: false
+            },
+            {
+              content: '',
+              is_correct: true
+            }
+          ]
+        }
+      },
+      {
+        id: 2,
+        title: 'Observation',
+        content: 'Agglomération, intersection, descente de passagers',
+        icon: '/assets/images/sections/research.svg',
+        completed: false,
+        question: {
+          content: '',
+          entry_video: '',
+          success_video: '',
+          error_video: '',
+          answers: [
+            {
+              content: '',
+              is_correct: false
+            },
+            {
+              content: '',
+              is_correct: false
+            },
+            {
+              content: '',
+              is_correct: true
+            }
+          ]
+        }
+      }
+    ]
   },
   {
     id: 2,

@@ -1,34 +1,25 @@
-<div class="sections">
+<div class="sections" *ngIf="topic">
   <div class="sections__title">
-    <h2>Circulation</h2>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum, accusamus?</p>
+    <h2>{{ topic.name }}</h2>
+    <p>{{ topic.label }}</p>
   </div>
   <div class="sections__content">
     <div class="first-issues">
-      <div class="issue-card">
+      <div class="issue-card"*ngFor="let section of topic.sections">
         <div class="icon">
-          <img src="/assets/images/sections/research.svg" class="incompleted">
+          <img src="/assets/images/sections/research.svg" [class.incompleted]="!section.completed">
         </div>
-        <span class="success">
+        <span class="success" *ngIf="section.completed">
           <i class="material-icons">check_circle</i>
         </span>
         <div class="description">
-          <strong>Observation</strong>
-          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequuntur, soluta!</p>
-        </div>
-      </div>
-      <div class="issue-card">
-        <div class="icon">
-          <img src="/assets/images/sections/research.svg" class="incompleted">
-        </div>
-        <div class="description">
-          <strong>Observation</strong>
-          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequuntur, soluta!</p>
+          <strong>{{ section.title }}</strong>
+          <p>{{ section.content }}</p>
         </div>
       </div>
     </div>
     <div class="last-issues">
-      <img src="/assets/images/certificate/005-trophy.svg" class=incompleted>
+      <img src="/assets/images/certificate/005-trophy.svg" [class.incompleted]="!topic.is_completed">
     </div>
   </div>
 </div>
