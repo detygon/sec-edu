@@ -1,21 +1,23 @@
 import { Injectable } from '@angular/core';
 import { InMemoryDbService } from 'angular-in-memory-web-api';
 import { Observable } from 'rxjs';
-
-import { categories } from '../../mocks/categories.mocks';
+/**
+ * Mocks
+ */
+import { topics } from '../../mocks/topics.mocks';
 import { sections } from '../../mocks/sections.mocks';
+import { subscribes } from '../../mocks/subscribe.mocks';
 
-@Injectable({
-  providedIn: 'root'
-})
+@Injectable()
 export class BackendService implements  InMemoryDbService {
   /**
    * Create DB
    */
   createDb(reqInfo?): {} | Observable<{}> {
     return {
-      categories,
-      sections
+      topics,
+      sections,
+      subscribes
     };
   }
 }

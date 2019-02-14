@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  fakeUrl: 'http://api.sec-edu.com'
+  fakeUrl: 'http://sec-edu.com/api'
 };
 
 /*

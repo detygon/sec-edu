@@ -9,32 +9,32 @@ import { map, catchError } from 'rxjs/operators';
 @Injectable({
   providedIn: 'root'
 })
-export class CategoryService {
+export class SubscribeService {
   /**
    * shelf endpoint
    */
-  private categoryEndpoint = 'categories';
+  private sectionEndpoint = 'categories';
 
   /**
-   * Category constructor
+   * Section constructor
    */
   constructor(private apiService: ApiService) { }
 
   /**
-   * Get all categories
+   * Get all sections
    */
-  getAllCategories(params?: any): Observable<any> {
-    return this.apiService.get(`${this.categoryEndpoint}`, params).pipe(
+  getAllSections(params?: any): Observable<any> {
+    return this.apiService.get(`${this.sectionEndpoint}`, params).pipe(
       map((response: any) => response),
       catchError(error => throwError(error))
     );
   }
 
   /**
-   * Get Category by ID
+   * Get section by ID
    */
-  getCategory(categoryId: number, params?: any): Observable<any> {
-    return this.apiService.get(`${this.categoryEndpoint}/${categoryId}`, params).pipe(
+  getSection(sectionId: number, params?: any): Observable<any> {
+    return this.apiService.get(`${this.sectionEndpoint}/${sectionId}`, params).pipe(
       map((response: any) => response),
       catchError(error => throwError(error))
     );
