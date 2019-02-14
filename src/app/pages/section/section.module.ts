@@ -3,12 +3,14 @@ import { CommonModule } from '@angular/common';
 
 import { SectionRoutingModule } from './section-routing.module';
 import { SectionComponent } from './section.component';
+import { SharedModule } from '../../shared/shared.module';
 
 @NgModule({
   declarations: [SectionComponent],
   imports: [
     CommonModule,
-    SectionRoutingModule
+    SectionRoutingModule,
+    SharedModule
   ]
 })
 export class SectionModule { }

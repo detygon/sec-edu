@@ -6,7 +6,16 @@ import {TopicService} from '../../core/services/topic/topic.service';
   templateUrl: './topic.component.html'
 })
 export class TopicComponent implements OnInit {
+  /**
+   * Topics
+   */
   public topics = [];
+
+  /**
+   * Show loader
+   */
+  public showLoader = false;
+
   /**
    * Constructor topic
    */
@@ -16,6 +25,7 @@ export class TopicComponent implements OnInit {
    * Lifecycle init
    */
   ngOnInit() {
+    this.showLoader = true;
     this.getTopics();
   }
 
@@ -25,6 +35,10 @@ export class TopicComponent implements OnInit {
   private getTopics() {
     this.topicService.getAllTopics().subscribe((res) => {
       this.topics = res;
+
+      if (this.topics) {
+        this.showLoader = false;
+      }
     });
   }
 }
