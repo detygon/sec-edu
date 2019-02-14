@@ -3,9 +3,9 @@
     <div class="col-lg-3" *ngFor="let topic of topics" >
       <div class="topic">
         <div class="topic__picture">
-
+          <img [src]="topic.image" [alt]="topic.name">
         </div>
-        <div class="picture__body">
+        <div class="topic__body">
           <h3>{{ topic.name }}</h3>
         </div>
       </div>
