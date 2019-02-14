@@ -2,9 +2,9 @@ export const sections = [
   {
     id: 1,
     topic_id: 1,
-    name: '',
-    label: '',
-    icon: '',
+    name: 'Observation',
+    label: 'Agglomération, intersection, descente de passagers',
+    icon: '/assets/images/sections/research.svg',
     question: {
       content: '',
       entry_video: '',
