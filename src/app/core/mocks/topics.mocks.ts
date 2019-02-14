@@ -16,9 +16,9 @@ export const topics = [
         completed: true,
         question: {
           content: '',
-          entry_video: '',
-          success_video: '',
-          error_video: '',
+          entry_video: 'animation_scene_depart.mp4',
+          success_video: 'animation_sans_accident.mp4',
+          error_video: 'animation_accident.mp4',
           answers: [
             {
               content: '',
