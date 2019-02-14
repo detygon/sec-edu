@@ -1,0 +1,14 @@
+.header {
+  position: fixed;
+  left: 0;
+  right: 0;
+  height: 66rem;
+  line-height: 66rem;
+  color: $color-white;
+  background-color: $color-primary;
+}
+
+.header__logo {
+  font-weight: 700;
+  padding: 0 2.5rem;
+}
