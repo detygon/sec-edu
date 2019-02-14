@@ -3,8 +3,7 @@ import {TopicService} from '../../core/services/topic/topic.service';
 
 @Component({
   selector: 'app-topic',
-  templateUrl: './topic.component.html',
-  styleUrls: ['./topic.component.scss']
+  templateUrl: './topic.component.html'
 })
 export class TopicComponent implements OnInit {
   public topics = [];
