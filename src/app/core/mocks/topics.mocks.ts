@@ -6,6 +6,136 @@ export const topics = [
     image: '/assets/images/topics/002-traffic-sign.svg',
     section_number: 10,
     slug: 'panneaux',
+    is_completed: true,
+    sections: [
+      {
+        id: 1,
+        title: 'Observation',
+        content: 'Agglomération, intersection, descente de passagers',
+        icon: '/assets/images/sections/research.svg',
+        completed: true,
+        question: {
+          content: '',
+          entry_video: '',
+          success_video: '',
+          error_video: '',
+          answers: [
+            {
+              content: '',
+              is_correct: false
+            },
+            {
+              content: '',
+              is_correct: false
+            },
+            {
+              content: '',
+              is_correct: true
+            }
+          ]
+        }
+      },
+      {
+        id: 2,
+        title: 'Observation',
+        content: 'Agglomération, intersection, descente de passagers',
+        icon: '/assets/images/sections/research.svg',
+        completed: true,
+        question: {
+          content: '',
+          entry_video: '',
+          success_video: '',
+          error_video: '',
+          answers: [
+            {
+              content: '',
+              is_correct: false
+            },
+            {
+              content: '',
+              is_correct: false
+            },
+            {
+              content: '',
+              is_correct: true
+            }
+          ]
+        }
+      }
+    ]
+  },
+  {
+    id: 2,
+    name: 'Circulation',
+    label: '',
+    image: '/assets/images/topics/004-road-signs.svg',
+    section_number: 10,
+    slug: 'circulation',
+    is_completed: false,
+    sections: [
+      {
+        id: 1,
+        title: 'Observation',
+        content: 'Agglomération, intersection, descente de passagers',
+        icon: '/assets/images/sections/research.svg',
+        completed: false,
+        question: {
+          content: '',
+          entry_video: '',
+          success_video: '',
+          error_video: '',
+          answers: [
+            {
+              content: '',
+              is_correct: false
+            },
+            {
+              content: '',
+              is_correct: false
+            },
+            {
+              content: '',
+              is_correct: true
+            }
+          ]
+        }
+      },
+      {
+        id: 2,
+        title: 'Observation',
+        content: 'Agglomération, intersection, descente de passagers',
+        icon: '/assets/images/sections/research.svg',
+        completed: false,
+        question: {
+          content: '',
+          entry_video: '',
+          success_video: '',
+          error_video: '',
+          answers: [
+            {
+              content: '',
+              is_correct: false
+            },
+            {
+              content: '',
+              is_correct: false
+            },
+            {
+              content: '',
+              is_correct: true
+            }
+          ]
+        }
+      }
+    ]
+  },
+  {
+    id: 3,
+    name: 'Route',
+    label: '',
+    image: '/assets/images/topics/007-road-blockade.svg',
+    section_number: 10,
+    slug: 'route',
     is_completed: false,
     sections: [
       {
@@ -65,28 +195,13 @@ export const topics = [
     ]
   },
   {
-    id: 2,
-    name: 'Circulation',
-    label: '',
-    image: '/assets/images/topics/004-road-signs.svg',
-    section_number: 10,
-    slug: 'circulation'
-  },
-  {
-    id: 3,
-    name: 'Route',
-    label: '',
-    image: '/assets/images/topics/007-road-blockade.svg',
-    section_number: 10,
-    slug: 'route',
-  },
-  {
     id: 4,
     name: 'Autres usagers',
     label: '',
     image: '/assets/images/topics/011-seatbelt-1.svg',
     section_number: 10,
-    slug: 'autres-usagers'
+    slug: 'autres-usagers',
+    is_completed: false,
   },
   {
     id: 5,
@@ -94,7 +209,64 @@ export const topics = [
     label: '',
     image: '/assets/images/topics/006-seatbelt.svg',
     section_number: 10,
-    slug: 'conducteur'
+    slug: 'conducteur',
+    is_completed: false,
+    sections: [
+      {
+        id: 1,
+        title: 'Observation',
+        content: 'Agglomération, intersection, descente de passagers',
+        icon: '/assets/images/sections/research.svg',
+        completed: false,
+        question: {
+          content: '',
+          entry_video: '',
+          success_video: '',
+          error_video: '',
+          answers: [
+            {
+              content: '',
+              is_correct: false
+            },
+            {
+              content: '',
+              is_correct: false
+            },
+            {
+              content: '',
+              is_correct: true
+            }
+          ]
+        }
+      },
+      {
+        id: 2,
+        title: 'Observation',
+        content: 'Agglomération, intersection, descente de passagers',
+        icon: '/assets/images/sections/research.svg',
+        completed: false,
+        question: {
+          content: '',
+          entry_video: '',
+          success_video: '',
+          error_video: '',
+          answers: [
+            {
+              content: '',
+              is_correct: false
+            },
+            {
+              content: '',
+              is_correct: false
+            },
+            {
+              content: '',
+              is_correct: true
+            }
+          ]
+        }
+      }
+    ]
   },
   {
     id: 6,
@@ -102,7 +274,64 @@ export const topics = [
     label: '',
     image: '/assets/images/topics/009-pedestrian.svg',
     section_number: 10,
-    slug: 'securite'
+    slug: 'securite',
+    is_completed: false,
+    sections: [
+      {
+        id: 1,
+        title: 'Observation',
+        content: 'Agglomération, intersection, descente de passagers',
+        icon: '/assets/images/sections/research.svg',
+        completed: false,
+        question: {
+          content: '',
+          entry_video: '',
+          success_video: '',
+          error_video: '',
+          answers: [
+            {
+              content: '',
+              is_correct: false
+            },
+            {
+              content: '',
+              is_correct: false
+            },
+            {
+              content: '',
+              is_correct: true
+            }
+          ]
+        }
+      },
+      {
+        id: 2,
+        title: 'Observation',
+        content: 'Agglomération, intersection, descente de passagers',
+        icon: '/assets/images/sections/research.svg',
+        completed: false,
+        question: {
+          content: '',
+          entry_video: '',
+          success_video: '',
+          error_video: '',
+          answers: [
+            {
+              content: '',
+              is_correct: false
+            },
+            {
+              content: '',
+              is_correct: false
+            },
+            {
+              content: '',
+              is_correct: true
+            }
+          ]
+        }
+      }
+    ]
   },
   {
     id: 7,
@@ -110,7 +339,64 @@ export const topics = [
     label: '',
     image: '/assets/images/topics/010-piston.svg',
     section_number: 10,
-    slug: 'mecanique-et-equipements'
+    slug: 'mecanique-et-equipements',
+    is_completed: false,
+    sections: [
+      {
+        id: 1,
+        title: 'Observation',
+        content: 'Agglomération, intersection, descente de passagers',
+        icon: '/assets/images/sections/research.svg',
+        completed: false,
+        question: {
+          content: '',
+          entry_video: '',
+          success_video: '',
+          error_video: '',
+          answers: [
+            {
+              content: '',
+              is_correct: false
+            },
+            {
+              content: '',
+              is_correct: false
+            },
+            {
+              content: '',
+              is_correct: true
+            }
+          ]
+        }
+      },
+      {
+        id: 2,
+        title: 'Observation',
+        content: 'Agglomération, intersection, descente de passagers',
+        icon: '/assets/images/sections/research.svg',
+        completed: false,
+        question: {
+          content: '',
+          entry_video: '',
+          success_video: '',
+          error_video: '',
+          answers: [
+            {
+              content: '',
+              is_correct: false
+            },
+            {
+              content: '',
+              is_correct: false
+            },
+            {
+              content: '',
+              is_correct: true
+            }
+          ]
+        }
+      }
+    ]
   },
   {
     id: 8,
@@ -119,6 +405,8 @@ export const topics = [
     image: '/assets/images/topics/013-transform.svg',
     section_number: 10,
     slug: 'notion-diverses',
+    is_completed: false,
+    sections: []
   },
   {
     id: 9,
@@ -127,6 +415,8 @@ export const topics = [
     image: '/assets/images/topics/003-road.svg',
     section_number: 10,
     slug: 'environnement',
+    is_completed: false,
+    sections: []
   },
   {
     id: 9,
@@ -135,6 +425,8 @@ export const topics = [
     image: '/assets/images/topics/008-first-aid-box.svg',
     section_number: 10,
     slug: 'premiers-secours',
+    is_completed: false,
+    sections: []
   },
   {
     id: 10,
@@ -143,5 +435,7 @@ export const topics = [
     image: '/assets/images/topics/012-fire-extinguisher.svg',
     section_number: 10,
     slug: 'prendre-et-quitter-son-vehicule',
+    is_completed: false,
+    sections: []
   }
 ];
