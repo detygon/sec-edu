@@ -1,6 +1,5 @@
 .header {
   position: relative;
-  z-index: 9999;
   left: 0;
   right: 0;
   height: 65px;
@@ -58,6 +57,13 @@
     .user-profile {
       display: inline-block;
       float: right;
+
+      img {
+        width: 42px;
+        height: auto;
+        display: inline-block;
+        vertical-align: middle;
+      }
     }
   }
 }
