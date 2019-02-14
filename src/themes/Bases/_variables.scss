@@ -1,4 +1,29 @@
-$bg-color: #fff;
-$app-font: '';
-$text-color: #333;
+// COLORS
+$color-primary: #1e559e;
+$color-primary-light: #8181cf;
+$color-primary-dark: #3310b4;
+
+$color-secondary-light: #afafb4;
+$color-secondary-dark: #97979b;
+
+$color-tertiary-light: #dbccaa;
+$color-tertiary-dark: #b3a483;
+
+$color-grey-light-1: #f7f7f7;
+$color-grey-light-2: #eee;
+
+$color-grey-dark: #777;
+$color-grey-dark-2: #999;
+$color-grey-dark-3: #333;
+
+$color-white: #fff;
+$color-black: #000;
+
+
+// FONT
+$default-font-size: 1.6rem;
+
+$bg-color: $color-grey-light-1;
+$app-font: 'Roboto', sans-serif;
+$text-color: $color-black;
 $title-font: '';
