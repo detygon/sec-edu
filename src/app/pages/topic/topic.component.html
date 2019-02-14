@@ -1,7 +1,7 @@
 <div class="topics">
   <div class="row">
-    <div class="col-lg-3" *ngFor="let topic of topics" >
-      <div class="topic">
+    <div class="col-lg-3" *ngFor="let topic of topics">
+      <div class="topic" [routerLink]="['/topics/', topic.slug]">
         <div class="topic__picture">
           <img [src]="topic.image" [alt]="topic.name">
         </div>
