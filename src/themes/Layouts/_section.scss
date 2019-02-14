@@ -118,5 +118,40 @@
         }
       }
     }
+
+    .last-issues {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 60px;
+      padding: 40px;
+      position: relative;
+      z-index: 3;
+
+      &:before {
+        content: '';
+        position: absolute;
+        top: -55px;
+        left: 50%;
+        width: 10px;
+        height: 90px;
+        transform: translateX(-50%);
+        background-color: #f1f1f1;
+        z-index: 1;
+      }
+
+      img {
+        width: 60px;
+        height: auto;
+      }
+
+      .incompleted {
+        -webkit-filter: grayscale(1);
+        -webkit-filter: grayscale(100%);
+        filter: gray;
+        filter: grayscale(100%);
+        opacity: .1;
+      }
+    }
   }
 }
