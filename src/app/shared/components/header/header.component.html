@@ -1,9 +1,19 @@
 <header class="header">
-  <a href="#" class="header__logo">
-    Sec edu
-  </a>
-  <nav class="header__menu">
-    <a href="#">Home</a>
-    <a href="#">user_avatar</a>
-  </nav>
+  <div class="container">
+    <!-- logo -->
+    <a href="#" class="header__logo">
+      SecEdu
+    </a>
+
+    <!-- navigation -->
+    <nav class="header__menu">
+      <a [routerLink]="['/dashboard']" routerLinkActive="active">Tableau de bord</a>
+      <a [routerLink]="['/topics']" routerLinkActive="active">Thématiques</a>
+      <a [routerLink]="['/user']" routerLinkActive="active">Discussions</a>
+
+      <div class="user-profile">
+        <a href="#">User</a>
+      </div>
+    </nav>
+  </div>
 </header>

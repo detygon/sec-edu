@@ -1,43 +1,63 @@
 .header {
   position: relative;
+  z-index: 9999;
   left: 0;
   right: 0;
-  height: 3rem;
-  line-height: 3rem;
-  color: $color-white;
-  background-color: $color-primary;
+  height: 65px;
+  line-height: 65px;
+  color: #000000;
+  background-color: #ffffff;
   display: flex;
   flex-direction: row;
-  box-shadow: 0 5px 15px -5px rgba(#000, .5);
+  //box-shadow: 0 5px 15px -5px rgba(#000, .5);
 
   &__logo {
-    font-weight: 700;
-    padding: 0 2.5rem;
     float: left;
-    font-size: 1rem;
-    flex: 0 0 250px;
-    text-shadow: 0 2px 8px rgba(#000, .1);
+    font-size: 1.1rem;
+    padding-right: 80px;
+    flex: 0 0 150px;
+    color: #22A7F0;
+    text-transform: capitalize;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 400;
 
     &:hover {
       text-decoration: none;
-      color: rgba(#fff, .8);
+      color: #22A7F0;
+    }
+
+    &:active {
+      text-decoration: none;
+      color: #22A7F0;
     }
   }
 
   &__menu {
     flex: auto;
-    text-align: right;
 
     a {
       padding: 0 10px;
-      font-size: 0.9rem;
+      font-size: 0.6rem;
       display: inline-block;
       vertical-align: middle;
       font-weight: 300;
+      margin: 0 20px 0 0;
+      text-decoration: none;
+      color: rgba(#000, .5);
+      transition-duration: 300ms;
+
+      &.active {
+        color: #000000;
+      }
 
       &:hover {
-        color: #c5cae9;
+        color: #000000;
       }
+    }
+
+    .user-profile {
+      display: inline-block;
+      float: right;
     }
   }
 }
