@@ -17,6 +17,11 @@
     font-size: 1rem;
     flex: 0 0 250px;
     text-shadow: 0 2px 8px rgba(#000, .1);
+
+    &:hover {
+      text-decoration: none;
+      color: rgba(#fff, .8);
+    }
   }
 
   &__menu {
