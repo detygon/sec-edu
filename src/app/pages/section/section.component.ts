@@ -16,7 +16,7 @@ export class SectionComponent implements OnInit {
   /**
    * Topic id
    */
-  private topic;
+  topic = {};
 
   /**
    * Sub

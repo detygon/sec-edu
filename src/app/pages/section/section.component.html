@@ -1,11 +1,11 @@
-<div class="sections" *ngIf="topic">
+<div class="sections" *ngIf="topic?.sections?.length > 0 else nothing">
   <div class="sections__title">
-    <h2>{{ topic.name }}</h2>
-    <p>{{ topic.label }}</p>
+    <h2>{{ topic?.name }}</h2>
+    <p>{{ topic?.label }}</p>
   </div>
   <div class="sections__content">
     <div class="first-issues">
-      <div class="issue-card"*ngFor="let section of topic.sections">
+      <div class="issue-card" *ngFor="let section of topic.sections">
         <div class="icon">
           <img src="/assets/images/sections/research.svg" [class.incompleted]="!section.completed">
         </div>
@@ -23,3 +23,17 @@
     </div>
   </div>
 </div>
+<ng-template #nothing>
+  <div class="empty-state">
+    <div class="picture">
+      <img src="/assets/images/empty.svg">
+    </div>
+    <div class="description">
+      <h4>Vous allez bien ?</h4>
+      <p>Désole il n'existe pas de sections pour cette thematique</p>
+    </div>
+    <span class="close" [routerLink]="['/topics']">
+      <i class="material-icons">close</i>
+    </span>
+  </div>
+</ng-template>
