@@ -49,4 +49,29 @@
       }
     }
   }
+
+  .no-topic {
+    display: flex;
+    border-radius: 20px;
+    padding: 20px;
+    margin-bottom: 40px;
+    height: 300px;
+    cursor: pointer;
+    transition: all 0.3s ease-in;
+    outline: none;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(#fff, .4);
+    transition-duration: 300ms;
+
+    &:hover {
+      box-shadow: 0 8px 15px rgba(#000, .05);
+    }
+
+    img {
+      width: 64px;
+      height: auto;
+      fill: #97979b;
+    }
+  }
 }
