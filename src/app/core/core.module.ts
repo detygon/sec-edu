@@ -2,9 +2,13 @@ import { CommonModule } from '@angular/common';
 import { ModuleWithProviders, NgModule, Optional, SkipSelf } from '@angular/core';
 import { throwIfAlreadyLoaded } from './guard/module.guard';
 
+import { InMemoryWebApiModule } from 'angular-in-memory-web-api';
+import { BackendService } from './services/backend/backend.service';
+
 @NgModule({
   imports: [
     CommonModule,
+    InMemoryWebApiModule.forRoot(BackendService)
   ],
   exports: [],
   declarations: [],
