@@ -69,15 +69,20 @@
       <h4>Mise en contexte</h4>
       <p>{{ lesson?.context }}</p>
       <div class="choices">
-        <div class="form-group" *ngFor="let answer of lesson.answers; let i = index">
-          <input type="radio" name="answer" [id]="'choice' + i" [value]="answer.is_correct">
-          <label [for]="'choice' + i">
-            <span class="checked">
-              <i class="material-icons">check_circle_outline</i>
-            </span>
-            {{ answer.content }}
-          </label>
-        </div>
+        <form #form="ngForm" (ngSubmit)="handleFormSubmit(form)" novalidate>
+          <div class="form-group" *ngFor="let answer of lesson.answers; let i = index">
+            <input type="radio" name="answer" [id]="'choice' + i" [value]="answer.is_correct">
+            <label [for]="'choice' + i">
+              <span class="checked">
+                <i class="material-icons">check_circle_outline</i>
+              </span>
+              {{ answer.content }}
+            </label>
+          </div>
+          <div class="validate-section">
+            <button type="submit">Soumettre</button>
+          </div>
+        </form>
       </div>
     </div>
   </div>
