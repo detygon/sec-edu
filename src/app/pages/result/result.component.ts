@@ -19,7 +19,7 @@ export class ResultComponent implements OnInit {
   ngOnInit() {
     this.route.paramMap.subscribe((params: ParamMap) => {
       const sectionId = params.get('section');
-      this.responses = JSON.parse(localStorage.getItem(sectionId)) || {};
+      this.responses = JSON.parse(localStorage.getItem('responses')) || false;
       this.lessonService.getLesson(+sectionId).subscribe(res => this.lesson = res.question);
     });
 
@@ -27,6 +27,6 @@ export class ResultComponent implements OnInit {
   }
 
   isSubmissionSuccessful() {
-    return this.responses.risques;
+    return this.responses;
   }
 }
