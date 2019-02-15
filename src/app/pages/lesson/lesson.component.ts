@@ -35,4 +35,8 @@ export class LessonComponent implements OnInit {
       });
     });
   }
+
+  handleVideoEnded() {
+    console.log('The video is ended');
+  }
 }
