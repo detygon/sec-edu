@@ -9,6 +9,10 @@
     border-bottom: 1px solid #ddd;
   }
 
+  h5 {
+    margin-bottom: 20px;
+  }
+
   h6 {
     font-weight: 500;
     font-size: 0.9rem;
@@ -18,28 +22,33 @@
 
   p {
     font-weight: 300;
-    font-size: 0.6rem;
+    font-size: 15px;
+    line-height: 1.8;
     color: #777777;
   }
 
   ul {
-    margin: 0;
+    margin: 10px 0 0 0;
     padding: 0;
     list-style: none;
 
     li {
       color: #999999;
-      padding: 10px 0 10px 20px;
+      padding: 10px 0 10px 30px;
       position: relative;
       font-weight: 400;
+      font-size: 14px;
+      line-height: 1.8;
 
       &:before {
         content: '';
         position: absolute;
-        width: 10px;
-        height: 10px;
-        background-color: #101010;
-        left: 0; top: 18px;
+        width: 16px;
+        height: 16px;
+        background-image: url('/assets/images/success.png');
+        background-repeat: no-repeat;
+        left: 2px;
+        top: 16px;
         border-radius: 50%;
       }
     }
