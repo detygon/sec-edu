@@ -101,7 +101,7 @@ h6 {
 }
 
 .initiation-modal {
-  position: absolute !important;
+  position: fixed !important;
   top: 0; right: 0; left: 0; bottom: 0;
   background-color: #f1f1f1;
   z-index: 99999;
@@ -109,4 +109,89 @@ h6 {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+
+  .answers {
+    display: block;
+    width: 580px;
+
+    h4 {
+      font-weight: 700;
+      color: #777777;
+      font-size: 1.2rem;
+    }
+
+    p {
+      font-size: 0.7rem;
+      color: #999999;
+      font-weight: 300;
+      font-family: $title-font;
+    }
+
+    .choices {
+      display: block;
+      padding: 20px;
+
+      label {
+        background-color: #fff;
+        border-radius: 5px;
+        padding: 15px 15px 15px 80px;
+        display: block;
+        font-size: .7rem;
+        border: 2px solid #f1f1f1;
+        cursor: pointer;
+        font-family: $title-font;
+        font-weight: 700;
+        box-shadow: 0 2px 8px rgba(#000, .08);
+        position: relative;
+
+        .checked {
+          position: absolute;
+          left: 30px;
+          color: #ddd;
+        }
+
+        &:hover {
+          border: 2px solid #00b894;
+
+          .checked {
+            color: #00b894;
+          }
+        }
+      }
+
+      input[type="radio"] {
+        display: none;
+      }
+
+      input:checked + label {
+        border: 2px solid #00b894;
+
+        .checked {
+          color: #00b894;
+        }
+      }
+    }
+
+  }
+
+  .close {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    font-size: 52px;
+    cursor: pointer;
+    width: 80px;
+    height: 80px;
+    text-align: center;
+    line-height: 80px;
+    outline: none;
+
+    span {
+      font-size: 12px;
+      display: block;
+      line-height: 0;
+      letter-spacing: 2px;
+      margin-top: -10px;
+    }
+  }
 }
