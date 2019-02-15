@@ -1,4 +1,37 @@
 .results {
   display: block;
-  padding-top: 70px;
+  padding-top: 90px;
+
+  .card {
+    padding: 20px;
+    font-size: 16px;
+    line-height: 1.8;
+
+    ul {
+      margin: 10px 0 0 0;
+      padding: 0;
+      list-style: none;
+
+      li {
+        color: #999999;
+        padding: 10px 0 10px 30px;
+        position: relative;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 1.8;
+
+        &:before {
+          content: '';
+          position: absolute;
+          width: 16px;
+          height: 16px;
+          background-image: url('/assets/images/success.png');
+          background-repeat: no-repeat;
+          left: 2px;
+          top: 16px;
+          border-radius: 50%;
+        }
+      }
+    }
+  }
 }

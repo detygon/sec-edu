@@ -29,14 +29,17 @@ export const sections = [
       answers: [
         {
           content: 'Aucun risque',
+          label: 'nothing',
           is_correct: false
         },
         {
           content: 'Une pluie soudaine',
+          label: 'no',
           is_correct: false
         },
         {
           content: 'Une voiture venant de derriere le bus',
+          label: 'yes',
           is_correct: true
         }
       ]

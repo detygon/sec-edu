@@ -3,13 +3,15 @@
     <div class="row">
       <div class="col-12">
         <div class="card">
-          <video src="{{ lesson?.success_video }}" controls></video>
+          <video preload="metadata" controls autoplay ngIf="lesson">
+            <source [src]="lesson.success_video">
+          </video>
         </div>
       </div>
       <div class="col-12">
         <div class="card mt-3">
           <h4>Explication</h4>
-          <p style="font-size: 0.8rem">
+          <p>
             Le piéton perçoit l’arrivée d’un cyclomotoriste venant de derrière
             le bus. Il s’arrête et attend de pouvoir traverser en toute
             sécurité. Le cyclomotoriste est en train d’effectuer le dépassement
@@ -30,7 +32,7 @@
       <div class="col-12">
         <div class="card mt-3">
           <h4>Explication</h4>
-          <p style="font-size: 0.8rem;">
+          <p>
             Le piéton descend du bus et marque son intention de traverser la rue
             devant celui-ci. Le bus à l’arrêt masque la visibilité. D’autres
             usagers sont susceptibles d’arriver (automobile venant de la droite,
@@ -38,7 +40,7 @@
             piéton identifie les risques et analyse la situation avant de
             prendre une décision.
           </p>
-          <p style="font-size: 0.8rem;">
+          <p>
             Ici, Le piéton n’identifie pas les risques avant de s’engager pour
             traverser la rue. De son côté, le deux-roues venant de derrière le
             bus le dépasse sans avoir perçu les dangers (absence de visibilité,
@@ -54,7 +56,7 @@
     <div class="col-12">
       <div class="card mt-3">
         <h4>Synthèse</h4>
-        <p style="font-size: 0.8rem">
+        <p>
           Il est essentiel que le piéton traverse avec prudence en raison de
           l’absence de visibilité. Sa démarche doit s’orienter vers la recherche
           d’indices - à travers les vitres du bus afin de visualiser la présence
@@ -68,7 +70,7 @@
     <div class="col-12">
       <div class="card mt-3">
         <h4>Attitudes possibles</h4>
-        <div style="font-size: 0.8rem">
+        <div>
           <ul>
             <li>
               Attendre le départ du bus pour disposer d’une meilleure
@@ -92,3 +94,5 @@
     </div>
   </div>
 </div>
+<app-loader *ngIf="hasSuccedded"></app-loader>
+

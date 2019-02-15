@@ -8,6 +8,7 @@ import { AppComponent } from './app.component';
 
 import { CoreModule } from './core/core.module';
 import { SharedModule } from './shared/shared.module';
+import { SweetAlert2Module } from '@toverux/ngx-sweetalert2';
 import { FormsModule } from '@angular/forms';
 
 @NgModule({
@@ -18,6 +19,7 @@ import { FormsModule } from '@angular/forms';
     HttpClientModule,
     CoreModule.forRoot(),
     SharedModule.forRoot(),
+    SweetAlert2Module.forRoot(),
     BrowserAnimationsModule,
   ],
   providers: [],
