@@ -85,7 +85,7 @@ export class LessonComponent implements OnInit {
    * handle from  submit
    */
   handleFormSubmit(form: NgForm) {
-    localStorage.setItem(this.sectionId.toString(), JSON.stringify(form.value));
+    localStorage.setItem('responses', form.value.risques);
     this.router.navigate(['../results'], { relativeTo: this.route });
   }
 }
