@@ -15,21 +15,32 @@ export class ResultComponent implements OnInit, AfterViewInit {
   responses: any;
   lesson;
   hasSuccedded: boolean;
+  loader = false;
+
 
   constructor(
     private route: ActivatedRoute,
-    private lessonService: LessonService) { }
+    private lessonService: LessonService,
+  ) { }
 
   ngOnInit() {
+    this.loader = true;
+
     this.route.paramMap.subscribe((params: ParamMap) => {
       const sectionId = params.get('section');
-      this.responses = JSON.parse(localStorage.getItem('responses')) || false;
-      this.lessonService.getLesson(+sectionId).subscribe(res => this.lesson = res.question);
+
+      this.lessonService.getLesson(+sectionId).subscribe(res => {
+        this.lesson = res.question;
+        const responseUser = localStorage.getItem('response');
+        this.responses = (responseUser === 'yes');
+        this.hasSuccedded = (responseUser === 'yes');
+      });
     });
 
-    this.hasSuccedded = this.isSubmissionSuccessful();
+    const responseUserN = localStorage.getItem('response');
+    this.hasSuccedded = (responseUserN === 'yes');
 
-    this.deleteSwal.show();
+    this.isSubmissionSuccessful();
   }
 
   ngAfterViewInit() {
@@ -37,6 +48,8 @@ export class ResultComponent implements OnInit, AfterViewInit {
   }
 
   isSubmissionSuccessful() {
-    return this.responses;
+    setTimeout(() => {
+      this.loader = false;
+    });
   }
 }

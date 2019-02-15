@@ -20,6 +20,7 @@ import { FormsModule } from '@angular/forms';
     CoreModule.forRoot(),
     SharedModule.forRoot(),
     SweetAlert2Module.forRoot(),
+    FormsModule,
     BrowserAnimationsModule,
   ],
   providers: [],

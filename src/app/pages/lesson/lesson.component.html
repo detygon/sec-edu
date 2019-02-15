@@ -72,9 +72,9 @@
       <h4>Mise en contexte</h4>
       <p>{{ lesson?.context }}</p>
       <div class="choices">
-        <form #form="ngForm" (ngSubmit)="handleFormSubmit(form, answer?.is_correct)" novalidate>
+        <form [formGroup]="answerForm" (submit)="handleFormSubmit()">
           <div class="form-group" *ngFor="let answer of lesson?.answers; let i = index">
-            <input type="radio" name="risques" [id]="'choice' + i" [value]="answer?.label" ngModel>
+            <input type="radio"  [id]="'choice' + i" [value]="answer?.label" formControlName="risque">
             <label [for]="'choice' + i">
               <span class="checked">
                 <i class="material-icons">check_circle_outline</i>

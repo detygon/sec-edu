@@ -1,9 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, ParamMap, Router } from '@angular/router';
-import { NgForm } from '@angular/forms';
+import {FormBuilder, NgForm} from '@angular/forms';
 import { SectionService } from '../../core/services/section/section.service';
 import { trigger, transition, style, state, useAnimation } from '@angular/animations';
 import { slideInDown, slideInUp } from 'ng-animate';
+import {FormBuilder, FormGroup} from '@angular/forms';
 
 @Component({
   selector: 'app-lesson',
@@ -59,12 +60,17 @@ export class LessonComponent implements OnInit {
    */
   private stub: any;
 
+  isCorrectedAnswer: any;
+
+  answerForm: FormGroup;
+
   /**
    * Lesson constructor
    */
   constructor(
     private sectionService: SectionService,
     private route: ActivatedRoute,
+    private _fb: FormBuilder,
     private router: Router) {}
 
   /**
@@ -78,6 +84,10 @@ export class LessonComponent implements OnInit {
     });
 
     this.getLesson();
+
+    this.answerForm = this._fb.group({
+      risque: ['']
+    });
   }
 
   /**
@@ -104,8 +114,9 @@ export class LessonComponent implements OnInit {
   /**
    * handle from  submit
    */
-  handleFormSubmit(form: NgForm, isCorrected) {
-    localStorage.setItem('responses', isCorrected);
+  handleFormSubmit() {
+    console.log(this.answerForm.value.risque);
+    localStorage.setItem('response', this.answerForm.value.risque);
     this.router.navigate(['../results'], { relativeTo: this.route });
   }
 

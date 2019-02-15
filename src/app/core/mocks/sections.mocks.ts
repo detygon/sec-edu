@@ -28,16 +28,19 @@ export const sections = [
       ],
       answers: [
         {
+          id: 1,
           content: 'Aucun risque',
           label: 'nothing',
           is_correct: false
         },
         {
+          id: 2,
           content: 'Une pluie soudaine',
           label: 'no',
           is_correct: false
         },
         {
+          id: 3,
           content: 'Une voiture venant de derriere le bus',
           label: 'yes',
           is_correct: true

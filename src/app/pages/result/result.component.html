@@ -2,10 +2,8 @@
   <div *ngIf="hasSuccedded; else errorBlock">
     <div class="row">
       <div class="col-12">
-        <div class="card">
-          <video preload="metadata" controls autoplay ngIf="lesson">
-            <source [src]="lesson.success_video">
-          </video>
+        <div class="card" *ngIf="lesson">
+          <video [src]="lesson?.success_video" controls autoplay></video>
         </div>
       </div>
       <div class="col-12">
@@ -94,5 +92,5 @@
     </div>
   </div>
 </div>
-<app-loader *ngIf="hasSuccedded"></app-loader>
+<app-loader *ngIf="loader"></app-loader>
 

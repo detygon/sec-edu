@@ -4,6 +4,7 @@ import { LessonComponent } from './lesson.component';
 import { SharedModule } from 'src/app/shared/shared.module';
 import { LessonRoutingModule } from './lesson-routing.module';
 import { FormsModule } from '@angular/forms';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [LessonComponent],
@@ -11,7 +12,8 @@ import { FormsModule } from '@angular/forms';
     CommonModule,
     SharedModule,
     LessonRoutingModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
   ]
 })
 export class LessonModule { }
