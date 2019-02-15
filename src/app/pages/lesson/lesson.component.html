@@ -61,7 +61,7 @@
 </div>
 
 <ng-template [ngIf]="initiationDone">
-  <div class="initiation-modal">
+  <div class="initiation-modal" [@bounce]="initiationDone ? 'open' : 'closed'">
     <span class="close" (click)="closeModal()">
       <i class="material-icons">close</i>
     </span>

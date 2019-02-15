@@ -2,13 +2,33 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, ParamMap, Router } from '@angular/router';
 import { NgForm } from '@angular/forms';
 import { SectionService } from '../../core/services/section/section.service';
+import { trigger, transition, style, state, useAnimation } from '@angular/animations';
+import { slideInDown, slideInUp } from 'ng-animate';
 
 @Component({
   selector: 'app-lesson',
   templateUrl: './lesson.component.html',
-  styleUrls: ['./lesson.component.scss']
+  animations: [
+    trigger('bounce', [
+      state('open', style({
+        display: 'flex'
+      })),
+      state('closed', style({
+        display: 'none'
+      })),
+      transition('open => closed', [useAnimation(slideInDown, {
+        params: { timing: 1 }
+      })]),
+      transition('closed => open', [useAnimation(slideInUp, {
+        params: { timing: 0.5 }
+      })]),
+    ]),
+  ],
 })
 export class LessonComponent implements OnInit {
+
+  bounce: any;
+
   /**
    * lesson
    */
