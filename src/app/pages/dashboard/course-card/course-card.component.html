@@ -1,0 +1,46 @@
+<div class="course-card">
+  <mat-card>
+    <div
+      fxLayout="row"
+      fxLayout.xs="column"
+      fxLayoutWrap
+      fxLayoutAlign="center"
+      fxLayoutGap="0.5%"
+    >
+      <div fxFlex="50%" fxItemAlign="center">
+        <h2>{{ courseTitle }}</h2>
+        <mat-divider [vertical]="true"></mat-divider>
+      </div>
+      <mat-divider [vertical]="true"></mat-divider>
+      <div fxFlex="25%">
+        <div
+          fxLayout="row"
+          fxLayout.xs="column"
+          fxLayoutWrap
+          fxLayoutGap="0.5%"
+        >
+          <mat-progress-spinner
+            fxFlex="50%"
+            color="primary"
+            mode="determinate"
+            value="{{ completion }}"
+          >
+          </mat-progress-spinner>
+          <div class="progress-indicator-wrapper">
+            <h2 fxFlex="50%" class="progress-indicator-label">
+              {{ completion }}%
+            </h2>
+          </div>
+        </div>
+      </div>
+      <mat-divider [vertical]="true"></mat-divider>
+      <div fxFlex="25%">
+        <h5>Section en cours</h5>
+        <h3>{{ currentSection ? currentSection : 'Aucune' }}</h3>
+        <button mat-raised-button color="primary" style="margin-top: 2rem">
+          {{ currentSection ? 'Continuer' : 'Demarrer' }}
+        </button>
+      </div>
+    </div>
+  </mat-card>
+</div>
