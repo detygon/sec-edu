@@ -6,6 +6,14 @@ export const sections = [
     label: 'Agglomération, intersection, descente de passagers',
     icon: '/assets/images/sections/research.svg',
     question: {
+      contexte: `En agglomération, à l’abord d’une intersection, un véhicule de transport en commun est arrêté sur le bord droit de la
+chaussée afin de permettre aux passagers de descendre. Un passager descend et traverse devant le bus en empruntant le
+passage pour piétons.
+La scène semble simple, en réalité, elle est plutôt complexe : intersection, croisement de plusieurs catégories d’usagers et
+visibilité fortement masquée à gauche par la présence du bus à l’arrêt. Un véhicule circulant dans une rue venant de droite
+aborde la rue que traverse le piéton.
+Dans cette situation, il est essentiel que le piéton identifie les risques existants afin d’adapter son comportement, maintenir
+sa sécurité ainsi que celle des autres`,
       content: '',
       entry_video: '',
       success_video: '',
@@ -80,4 +88,4 @@ export const sections = [
       ]
     }
   }
-];
+]
