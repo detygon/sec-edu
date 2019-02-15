@@ -8,7 +8,7 @@
   </div>
   <div class="sections__content">
     <div class="first-issues">
-      <div class="issue-card" *ngFor="let section of topic.sections">
+      <div class="issue-card" *ngFor="let section of topic.sections" [routerLink]="[section.id, 'learn']">
         <div class="icon">
           <img src="/assets/images/sections/research.svg" [class.incompleted]="!section.completed">
         </div>
