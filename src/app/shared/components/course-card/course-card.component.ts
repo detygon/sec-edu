@@ -6,9 +6,9 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class CourseCardComponent implements OnInit {
 
-  // @Input() courseTitle: string;
-  // @Input() completion: number;
-  // @Input() currentSection: string;
+  @Input() courseTitle: string;
+  @Input() completion: number;
+  @Input() currentSection: string;
 
   constructor() { }
 
