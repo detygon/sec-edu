@@ -1,4 +1,4 @@
-<div class="sections" *ngIf="topic?.sections?.length > 0 else nothing">
+<div class="sections" *ngIf="topic?.sections?.length > 0; else nothing">
   <div class="sections__title">
     <h2>{{ topic?.name }}</h2>
     <p>{{ topic?.label }}</p>

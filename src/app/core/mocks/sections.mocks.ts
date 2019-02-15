@@ -5,6 +5,9 @@ export const sections = [
     name: 'Observation',
     label: 'Agglomération, intersection, descente de passagers',
     icon: '/assets/images/sections/research.svg',
+    entry_video: 'animation_scene_depart.mp4',
+    success_video: 'animation_sans_accident.mp4',
+    error_video: 'animation_accident.mp4',
     question: {
       context: `En agglomération, à l’abord d’une intersection, un véhicule de transport en commun
       est arrêté sur le bord droit de la chaussée afin de permettre aux passagers de descendre.
