@@ -78,27 +78,7 @@ export const topics = [
         title: 'Observation',
         content: 'Agglomération, intersection, descente de passagers',
         icon: '/assets/images/sections/research.svg',
-        completed: false,
-        question: {
-          content: '',
-          entry_video: '',
-          success_video: '',
-          error_video: '',
-          answers: [
-            {
-              content: '',
-              is_correct: false
-            },
-            {
-              content: '',
-              is_correct: false
-            },
-            {
-              content: '',
-              is_correct: true
-            }
-          ]
-        }
+        completed: true,
       },
       {
         id: 2,
@@ -106,26 +86,6 @@ export const topics = [
         content: 'Agglomération, intersection, descente de passagers',
         icon: '/assets/images/sections/research.svg',
         completed: false,
-        question: {
-          content: '',
-          entry_video: '',
-          success_video: '',
-          error_video: '',
-          answers: [
-            {
-              content: '',
-              is_correct: false
-            },
-            {
-              content: '',
-              is_correct: false
-            },
-            {
-              content: '',
-              is_correct: true
-            }
-          ]
-        }
       }
     ]
   },
@@ -143,54 +103,14 @@ export const topics = [
         title: 'Observation',
         content: 'Agglomération, intersection, descente de passagers',
         icon: '/assets/images/sections/research.svg',
-        completed: true,
-        question: {
-          content: '',
-          entry_video: '',
-          success_video: '',
-          error_video: '',
-          answers: [
-            {
-              content: '',
-              is_correct: false
-            },
-            {
-              content: '',
-              is_correct: false
-            },
-            {
-              content: '',
-              is_correct: true
-            }
-          ]
-        }
+        completed: true
       },
       {
         id: 2,
         title: 'Observation',
         content: 'Agglomération, intersection, descente de passagers',
         icon: '/assets/images/sections/research.svg',
-        completed: false,
-        question: {
-          content: '',
-          entry_video: '',
-          success_video: '',
-          error_video: '',
-          answers: [
-            {
-              content: '',
-              is_correct: false
-            },
-            {
-              content: '',
-              is_correct: false
-            },
-            {
-              content: '',
-              is_correct: true
-            }
-          ]
-        }
+        completed: false
       }
     ]
   },

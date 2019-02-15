@@ -5,7 +5,27 @@
         <app-course-card [subscribes]="subscribes"></app-course-card>
       </div>
     </mat-tab>
-    <mat-tab label="Certificats"> Content 2 </mat-tab>
+    <mat-tab label="Certificats">
+      <div class="certification__content">
+        <div class="row">
+          <div class="col-3" *ngFor="let certification of certifications">
+            <div class="certification-card" [routerLink]="['/topics', certification.slug, 'sections']">
+              <div class="certification-card__picture">
+                <img [src]="certification.image" [class.incompleted]="!certification.is_completed" alt="{{ certification.name }}">
+              </div>
+
+              <div class="certification-card__body">
+                <h3>{{ certification.name }}</h3>
+              </div>
+
+              <div class="badge" [class.incompleted]="!certification.is_completed">
+                <img src="/assets/images/certificate/002-medal.svg" alt="">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </mat-tab>
   </mat-tab-group>
 </div>
 <app-loader *ngIf="showLoader"></app-loader>

@@ -7,6 +7,7 @@ import { Observable } from 'rxjs';
 import { topics } from '../../mocks/topics.mocks';
 import { sections } from '../../mocks/sections.mocks';
 import { subscribes } from '../../mocks/subscribe.mocks';
+import { certifications } from '../../mocks/certifications.mocks';
 
 @Injectable()
 export class BackendService implements  InMemoryDbService {
@@ -17,7 +18,8 @@ export class BackendService implements  InMemoryDbService {
     return {
       topics,
       sections,
-      subscribes
+      subscribes,
+      certifications
     };
   }
 }
