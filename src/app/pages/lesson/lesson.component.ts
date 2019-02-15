@@ -10,6 +10,7 @@ import { ActivatedRoute, ParamMap } from '@angular/router';
 export class LessonComponent implements OnInit {
   public lesson;
   public sectionName: string;
+  public initiationDone = false;
 
   public showLoader = false;
 
@@ -37,6 +38,6 @@ export class LessonComponent implements OnInit {
   }
 
   handleVideoEnded() {
-    console.log('The video is ended');
+    this.initiationDone = true;
   }
 }

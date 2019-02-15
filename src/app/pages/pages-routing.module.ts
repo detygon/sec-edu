@@ -6,6 +6,7 @@ const routes: Routes = [
   { path: 'topics', loadChildren: './topic/topic.module#TopicModule' },
   { path: 'topics/:topic/sections', loadChildren: './section/section.module#SectionModule' },
   { path: 'topics/:topic/sections/:section/learn', loadChildren: './lesson/lesson.module#LessonModule' },
+  { path: 'topics/:topic/sections/:section/results', loadChildren: './result/result.module#ResultModule' },
   { path: '', redirectTo: 'dashboard', pathMatch: 'full' }
 ];
 

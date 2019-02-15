@@ -18,6 +18,11 @@ export const sections = [
       entry_video: '/assets/video/animation_scene_depart.mp4',
       success_video: '/assets/video/animation_sans_accident.mp4',
       error_video: '/assets/video/animation_accident.mp4',
+      learning_outcomes: [
+        'Apprendre à observer finement',
+        'Apprendre à analyser les principaux facteurs en jeu dans une situation donnée',
+        'Identifier les comportements à adopter en tant que piétons sur la voie publique'
+      ],
       answers: [
         {
           content: 'Aucun risque',
@@ -28,7 +33,7 @@ export const sections = [
           is_correct: false
         },
         {
-          content: 'Un voiture venant de derriere le bus',
+          content: 'Une voiture venant de derriere le bus',
           is_correct: true
         }
       ]
