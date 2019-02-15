@@ -1,12 +1,94 @@
 <div class="results">
   <div *ngIf="hasSuccedded; else errorBlock">
-    <div class="card">
-      <video src="{{ lesson.success_video }}" controls></video>
+    <div class="row">
+      <div class="col-12">
+        <div class="card">
+          <video src="{{ lesson?.success_video }}" controls></video>
+        </div>
+      </div>
+      <div class="col-12">
+        <div class="card mt-3">
+          <h4>Explication</h4>
+          <p style="font-size: 0.8rem">
+            Le piéton perçoit l’arrivée d’un cyclomotoriste venant de derrière
+            le bus. Il s’arrête et attend de pouvoir traverser en toute
+            sécurité. Le cyclomotoriste est en train d’effectuer le dépassement
+            du bus, mais il perçoit le risque. Il adapte son allure et est en
+            mesure de s’arrêter pour laisser passer le piéton.
+          </p>
+        </div>
+      </div>
     </div>
   </div>
   <ng-template #errorBlock>
-    <div class="card">
-      <video src="{{ lesson.error_video }}" controls></video>
+    <div class="row">
+      <div class="col-12">
+        <div class="card">
+          <video src="{{ lesson?.error_video }}" controls></video>
+        </div>
+      </div>
+      <div class="col-12">
+        <div class="card mt-3">
+          <h4>Explication</h4>
+          <p style="font-size: 0.8rem;">
+            Le piéton descend du bus et marque son intention de traverser la rue
+            devant celui-ci. Le bus à l’arrêt masque la visibilité. D’autres
+            usagers sont susceptibles d’arriver (automobile venant de la droite,
+            usager en situation de dépassement du bus). Il est impératif que le
+            piéton identifie les risques et analyse la situation avant de
+            prendre une décision.
+          </p>
+          <p style="font-size: 0.8rem;">
+            Ici, Le piéton n’identifie pas les risques avant de s’engager pour
+            traverser la rue. De son côté, le deux-roues venant de derrière le
+            bus le dépasse sans avoir perçu les dangers (absence de visibilité,
+            engagement d’un usager non visible à l’avant du bus) et ne réduit
+            pas son allure. La conjonction de ces comportements inadaptés
+            conduit à la survenance de l’accident.
+          </p>
+        </div>
+      </div>
     </div>
   </ng-template>
+  <div class="row">
+    <div class="col-12">
+      <div class="card mt-3">
+        <h4>Synthèse</h4>
+        <p style="font-size: 0.8rem">
+          Il est essentiel que le piéton traverse avec prudence en raison de
+          l’absence de visibilité. Sa démarche doit s’orienter vers la recherche
+          d’indices - à travers les vitres du bus afin de visualiser la présence
+          d’un usager qui le dépasserait ou en étant attentif aux bruits qui
+          pourraient l’informer de l’arrivée d’un usager. Sa vigilance doit
+          également se porter sur l’attitude de l’automobiliste qui arrive de
+          droite.
+        </p>
+      </div>
+    </div>
+    <div class="col-12">
+      <div class="card mt-3">
+        <h4>Attitudes possibles</h4>
+        <div style="font-size: 0.8rem">
+          <ul>
+            <li>
+              Attendre le départ du bus pour disposer d’une meilleure
+              visibilité.
+            </li>
+            <li>
+              Être attentif aux éventuels bruits de moteurs permettant
+              d’identifier les véhicules qui se dirigent vers soi, notamment
+              ceux qui peuvent, comme dans cette situation précise, utiliser
+              l’espace entre le bus et l’axe médian de la chaussée pour
+              dépasser.
+            </li>
+            <li>
+              Dans ce type de situation, l’utilisation de distracteurs
+              (téléphone, écouteurs…) constitue autant de facteurs susceptibles
+              d’altérer la perception des risques.
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
