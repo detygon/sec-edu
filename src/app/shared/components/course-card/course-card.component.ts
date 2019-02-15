@@ -1,4 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
+import {SubscribeService} from '../../../core/services/subscribe/subscribe.service';
 
 @Component({
   selector: 'app-course-card',
@@ -6,13 +7,10 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class CourseCardComponent implements OnInit {
 
-  @Input() courseTitle: string;
-  @Input() completion: number;
-  @Input() currentSection: string;
+  @Input() subscribes = [];
 
   constructor() { }
 
   ngOnInit() {
   }
-
 }

@@ -13,7 +13,7 @@ export class SubscribeService {
   /**
    * shelf endpoint
    */
-  private sectionEndpoint = 'categories';
+  private subscribeEndpoint = 'subscribes';
 
   /**
    * Section constructor
@@ -23,18 +23,8 @@ export class SubscribeService {
   /**
    * Get all sections
    */
-  getAllSections(params?: any): Observable<any> {
-    return this.apiService.get(`${this.sectionEndpoint}`, params).pipe(
-      map((response: any) => response),
-      catchError(error => throwError(error))
-    );
-  }
-
-  /**
-   * Get section by ID
-   */
-  getSection(sectionId: number, params?: any): Observable<any> {
-    return this.apiService.get(`${this.sectionEndpoint}/${sectionId}`, params).pipe(
+  getSubscribes(params?: any): Observable<any> {
+    return this.apiService.get(`${this.subscribeEndpoint}`, params).pipe(
       map((response: any) => response),
       catchError(error => throwError(error))
     );

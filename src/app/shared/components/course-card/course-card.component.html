@@ -1,22 +1,22 @@
-<div class="course-card">
+<div class="course-card" *ngFor="let subscribe of subscribes">
   <div class="course-info">
-    <strong>Securité</strong>
-    <h4>Passage pieton</h4>
+    <strong>{{ subscribe.name }}</strong>
+    <h4>{{ subscribe.last_section }}</h4>
   </div>
   <div class="course-porcentage">
     <div class="circle">
       <mat-progress-spinner class="gray-spinner" [value]="100"></mat-progress-spinner>
       <mat-progress-spinner
         class="blue-spinner"
-        [value]="10">
+        [value]="(subscribe.section_completed * 100) / subscribe.section_number">
       </mat-progress-spinner>
     </div>
     <div class="number">
-      <strong>100%</strong>
+      <strong>{{ (subscribe.section_completed * 100) / subscribe.section_number }}%</strong>
       <span>Completed</span>
     </div>
   </div>
   <div class="course-resume">
-    <button>Continuer</button>
+    <button [routerLink]="['/topics', subscribe.slug, 'sections']">Continuer</button>
   </div>
 </div>
