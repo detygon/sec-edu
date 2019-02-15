@@ -13,7 +13,7 @@ export class SectionService {
   /**
    * shelf endpoint
    */
-  private sectionEndpoint = 'categories';
+  private sectionEndpoint = 'sections';
 
   /**
    * Section constructor
