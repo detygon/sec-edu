@@ -1,6 +1,109 @@
 .course-card {
   display: flex;
   flex-direction: row;
-  border-radius: 5px;
+  border-radius: 10px;
   background-color: #fff;
+  box-shadow: 0 2px 8px rgba(#000000, .1);
+  border: 1px solid rgba(#ddd, .5);
+  padding: 20px 40px;
+  height: 150px;
+
+  .course-info {
+    flex: auto;
+    font-family: $title-font;
+
+    strong {
+      color: #777777;
+      font-size: 0.5rem;
+      font-weight: 500;
+      display: inline-block;
+    }
+
+    h4 {
+      margin: 0;
+      padding: 0;
+      font-size: 1rem;
+    }
+  }
+
+  .course-porcentage {
+    flex: 0 0 250px;
+    display: flex;
+    flex-direction: row;
+    border-right: 1px solid rgba(#ddd, .5);
+
+    .circle {
+      flex: 1;
+      margin-right: 10px;
+      text-align: center;
+      position: relative;
+
+      mat-progress-spinner {
+        color: #ddd;
+      }
+
+      .gray-spinner {
+        position: absolute;
+        left: 0; top: 0;
+      }
+
+      .gray-spinner circle, .gray-spinner circle {
+        stroke: #ddd;
+      }
+
+      .blue-spinner circle, .blue-spinner circle {
+        stroke: $color-primary-dark;
+        position: absolute !important;
+      }
+    }
+
+    .number {
+      flex: 1;
+      padding: 40px 10px 10px 10px;
+      line-height: 0;
+
+      strong {
+        display: block;
+        margin: 0 0 15px 0;
+        padding: 0;
+        font-size: 0.9rem;
+        line-height: 0;
+        font-weight: 700;
+      }
+
+      span {
+        color: #777777;
+        font-size: 0.5rem;
+        line-height: 0;
+        font-weight: 400;
+      }
+    }
+  }
+
+  .course-resume {
+    flex: 0 0 250px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    button {
+      box-shadow: 0 5px 15px rgba(#000, .1);
+      text-transform: uppercase;
+      font-size: 13px;
+      font-weight: 700;
+      background-color: $color-primary-dark;
+      padding: 10px 40px;
+      border-radius: 5px;
+      color: #fff;
+      letter-spacing: 1px;
+      font-family: $title-font;
+      border: none;
+      display: inline-block;
+
+      &:hover {
+        background-color: $color-primary-light;
+      }
+    }
+  }
 }

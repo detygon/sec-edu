@@ -6,21 +6,23 @@ import { SidebarComponent } from './components/sidebar/sidebar.component';
 import { HeaderLinkDirective } from './directives/header-link/header-link.directive';
 import { RouterModule } from '@angular/router';
 import { LoaderComponent } from './components/loader/loader.component';
-import { MatTabsModule } from '@angular/material';
+import { MatTabsModule, MatProgressSpinnerModule } from '@angular/material';
 import { CourseCardComponent } from './components/course-card/course-card.component';
 
 @NgModule({
   imports: [
     CommonModule,
     RouterModule,
-    MatTabsModule
+    MatTabsModule,
+    MatProgressSpinnerModule
   ],
   exports: [
     HeaderComponent,
     SidebarComponent,
     LoaderComponent,
     MatTabsModule,
-    CourseCardComponent
+    CourseCardComponent,
+    MatProgressSpinnerModule
   ],
   declarations: [
     HeaderComponent,
