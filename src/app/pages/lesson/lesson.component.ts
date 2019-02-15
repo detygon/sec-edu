@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { LessonService } from 'src/app/core/services/lesson/lesson.service';
-import { ActivatedRoute, ParamMap } from '@angular/router';
+import { ActivatedRoute, ParamMap, Router } from '@angular/router';
+import { NgForm } from '@angular/forms';
 
 @Component({
   selector: 'app-lesson',
@@ -16,7 +17,8 @@ export class LessonComponent implements OnInit {
 
   constructor(
     private lessonService: LessonService,
-    private route: ActivatedRoute
+    private route: ActivatedRoute,
+    private router: Router
   ) {}
 
   ngOnInit() {
@@ -39,5 +41,10 @@ export class LessonComponent implements OnInit {
 
   handleVideoEnded() {
     this.initiationDone = true;
+  }
+
+  handleFormSubmit(form: NgForm) {
+    console.log(form.value);
+    this.router.navigate(['../results'], { relativeTo: this.route });
   }
 }

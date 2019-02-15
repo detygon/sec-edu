@@ -40,7 +40,7 @@
       </div>
     </div>
     <div class="col-12" *ngIf="initiationDone">
-      <form>
+      <form #form="ngForm" (ngSubmit)="handleFormSubmit(form)" novalidate>
         <div class="form-group">
           <label for="risques" class="form-label">
             Quels risques identifiés vous ?
