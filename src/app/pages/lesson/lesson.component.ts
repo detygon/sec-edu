@@ -11,6 +11,7 @@ import { NgForm } from '@angular/forms';
 export class LessonComponent implements OnInit {
   public lesson;
   public sectionName: string;
+  public sectionId: number;
   public initiationDone = false;
 
   public showLoader = false;
@@ -31,6 +32,7 @@ export class LessonComponent implements OnInit {
       this.lessonService.getLesson(+params.get('section')).subscribe(res => {
         this.lesson = res.question;
         this.sectionName = res.name;
+        this.sectionId = res.id;
 
         if (this.lesson) {
           this.showLoader = false;
@@ -44,7 +46,7 @@ export class LessonComponent implements OnInit {
   }
 
   handleFormSubmit(form: NgForm) {
-    console.log(form.value);
+    localStorage.setItem(this.sectionId.toString(), JSON.stringify(form.value));
     this.router.navigate(['../results'], { relativeTo: this.route });
   }
 }

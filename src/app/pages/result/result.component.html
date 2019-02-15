@@ -1,3 +1,12 @@
 <div class="results">
-  result works!
+  <div *ngIf="hasSuccedded; else errorBlock">
+    <div class="card">
+      <video src="{{ lesson.success_video }}" controls></video>
+    </div>
+  </div>
+  <ng-template #errorBlock>
+    <div class="card">
+      <video src="{{ lesson.error_video }}" controls></video>
+    </div>
+  </ng-template>
 </div>
