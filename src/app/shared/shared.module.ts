@@ -8,6 +8,7 @@ import { RouterModule } from '@angular/router';
 import { LoaderComponent } from './components/loader/loader.component';
 import { MatTabsModule, MatProgressSpinnerModule } from '@angular/material';
 import { CourseCardComponent } from './components/course-card/course-card.component';
+import { CertificateCardComponent } from './components/certificate-card/certificate-card.component';
 
 @NgModule({
   imports: [
@@ -29,7 +30,8 @@ import { CourseCardComponent } from './components/course-card/course-card.compon
     SidebarComponent,
     HeaderLinkDirective,
     LoaderComponent,
-    CourseCardComponent
+    CourseCardComponent,
+    CertificateCardComponent
   ],
 })
 export class SharedModule {

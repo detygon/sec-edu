@@ -88,4 +88,8 @@ export class LessonComponent implements OnInit {
     localStorage.setItem('responses', form.value.risques);
     this.router.navigate(['../results'], { relativeTo: this.route });
   }
+
+  closeModal() {
+    this.initiationDone = false;
+  }
 }

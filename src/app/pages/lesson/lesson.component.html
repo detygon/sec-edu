@@ -13,7 +13,7 @@
       <div class="card rounded">
         <video
           style="width: 100%; height: 100%"
-          src="{{ lesson?.entry_video }}"
+          src="{{ lesson.entry_video }}"
           controls
           (ended)="handleVideoEnded()"
         ></video>
@@ -21,39 +21,25 @@
     </div>
     <hr class="hr" />
     <div class="col-12">
-      <div class="row pl-0">
-        <div class="col-8 pl-0 pr-0">
-          <div class="col-12">
-            <div class="card p-3 mt-2" style="font-size: 18px">
-              <h5>Mise en contexte</h5>
-              <p>{{ lesson?.context }}</p>
-            </div>
-          </div>
-          <div class="col-12">
-            <div class="card p-3 mt-2" style="font-size: 18px">
-              <h5>Contenu</h5>
-              <p>{{ lesson?.content }}</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-4">
-          <div class="col-12 pr-0">
-            <div class="card mt-2 p-3" style="font-size: 16px">
-              <h6>Compétences visées</h6>
-              <div>
-                <ul>
-                  <li *ngFor="let outcome of lesson?.learning_outcomes">
-                    {{ outcome }}
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
+      <div class="card p-3 mt-2" style="font-size: 18px">
+        <h5>Mise en contexte</h5>
+        <p>{{ lesson.context }}</p>
+      </div>
+    </div>
+    <hr class="hr" />
+    <div class="col-12">
+      <div class="card mt-2 p-3" style="font-size: 18px">
+        <h5>Compétences visées</h5>
+        <div>
+          <ul>
+            <li *ngFor="let outcome of lesson.learning_outcomes">
+              {{ outcome }}
+            </li>
+          </ul>
         </div>
       </div>
     </div>
-
-    <div class="col-12" *ngIf="initiationDone">
+    <!-- <div class="col-12" >
       <form #form="ngForm" (ngSubmit)="handleFormSubmit(form)" novalidate>
         <div class="form-group">
           <label for="risques" class="form-label">
@@ -61,15 +47,38 @@
           </label>
           <select name="risques" class="form-control" ngModel>
             <option
-              *ngFor="let answer of lesson?.answers"
-              value="{{ answer?.is_correct }}">
-              {{ answer?.content }}
+              *ngFor="let answer of lesson.answers"
+              value="{{ answer.is_correct }}"
+            >
+              {{ answer.content }}
             </option>
           </select>
         </div>
         <button type="submit" class="btn btn-primary">Soumettre</button>
       </form>
-    </div>
+    </div> -->
   </div>
 </div>
-<app-loader *ngIf="showLoader"></app-loader>
+
+<ng-template [ngIf]="initiationDone">
+  <div class="initiation-modal">
+    <span class="close" (click)="closeModal()">
+      <i class="material-icons">close</i>
+    </span>
+    <div class="answers">
+      <h4>Mise en contexte</h4>
+      <p>{{ lesson?.context }}</p>
+      <div class="choices">
+        <div class="form-group" *ngFor="let answer of lesson.answers; let i = index">
+          <input type="radio" name="answer" [id]="'choice' + i" [value]="answer.is_correct">
+          <label [for]="'choice' + i">
+            <span class="checked">
+              <i class="material-icons">check_circle_outline</i>
+            </span>
+            {{ answer.content }}
+          </label>
+        </div>
+      </div>
+    </div>
+  </div>
+</ng-template>
